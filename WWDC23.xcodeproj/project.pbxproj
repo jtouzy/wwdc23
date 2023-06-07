@@ -16,6 +16,7 @@
 		F8E1B12E2A30D90E00DD788F /* ContainerRelativeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B12D2A30D90E00DD788F /* ContainerRelativeFrame.swift */; };
 		F8E1B1302A30E6B100DD788F /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B12F2A30E6B100DD788F /* Topics.swift */; };
 		F8E1B1322A30FBD400DD788F /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1312A30FBD400DD788F /* Inspector.swift */; };
+		F8E1B1342A31219900DD788F /* SafeAreaPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1332A31219900DD788F /* SafeAreaPadding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F8E1B12D2A30D90E00DD788F /* ContainerRelativeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRelativeFrame.swift; sourceTree = "<group>"; };
 		F8E1B12F2A30E6B100DD788F /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
 		F8E1B1312A30FBD400DD788F /* Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
+		F8E1B1332A31219900DD788F /* SafeAreaPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaPadding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				F8E1B12D2A30D90E00DD788F /* ContainerRelativeFrame.swift */,
 				F8E1B1312A30FBD400DD788F /* Inspector.swift */,
+				F8E1B1332A31219900DD788F /* SafeAreaPadding.swift */,
 				F8E1B12B2A30D6D100DD788F /* ScrollTransition.swift */,
 				F8E1B1262A306F1200DD788F /* ScrollViewPosition.swift */,
 			);
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E1B1342A31219900DD788F /* SafeAreaPadding.swift in Sources */,
 				F8E1B1302A30E6B100DD788F /* Topics.swift in Sources */,
 				F8E1B1322A30FBD400DD788F /* Inspector.swift in Sources */,
 				F833C1E82A2F6A0200B338F0 /* ContentView.swift in Sources */,
