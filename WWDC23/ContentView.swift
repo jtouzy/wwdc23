@@ -1,44 +1,30 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State var selectedTopic: Topic?
+  @State var sections = TopicSection.allCases
+  @State var selectedConcreteTopic: ConcreteTopic?
   
   var body: some View {
     NavigationStack {
-      List(Topic.allCases) { topic in
-        Button(topic.id) { selectedTopic = topic }
+      List(sections) { section in
+        Section(section.id) {
+          ForEach(section.topics) { concreteTopic in
+            Button("\(concreteTopic.id)") { selectedConcreteTopic = concreteTopic }
+          }
+        }
       }
       .navigationTitle("WWDC23 Topics")
     }
-    .sheet(item: $selectedTopic) { topic in
+    .sheet(item: $selectedConcreteTopic) { selectedConcreteTopic in
       NavigationStack {
-        topic
-          .buildTopicView()
-          .navigationTitle(topic.id)
-          .navigationBarTitleDisplayMode(.inline)
+        // NOTE: Quick and dirty way to display any dynamic View here, as we don't care about global state and
+        // global view redraw, and it's in a dedicated sheet context, nevermind of using the AnyView demon here
+        AnyView(
+          selectedConcreteTopic.topic.buildTopicView()
+        )
+        .navigationTitle(selectedConcreteTopic.id)
+        .navigationBarTitleDisplayMode(.inline)
       }
-    }
-  }
-}
-
-enum Topic: String, CaseIterable, Identifiable {
-  case containerRelativeFrame
-  case scrollTransition
-  case scrollViewPosition
-  
-  var id: Self.RawValue { rawValue }
-}
-
-extension Topic {
-  @ViewBuilder
-  func buildTopicView() -> some View {
-    switch self {
-    case .containerRelativeFrame:
-      ContainerRelativeFrame()
-    case .scrollTransition:
-      ScrollTransition()
-    case .scrollViewPosition:
-      ScrollViewPosition()
     }
   }
 }
