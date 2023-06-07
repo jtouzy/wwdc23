@@ -9,7 +9,10 @@ struct ContentView: View {
       List(sections) { section in
         Section(section.id) {
           ForEach(section.topics) { concreteTopic in
-            Button("\(concreteTopic.id)") { selectedConcreteTopic = concreteTopic }
+            HStack {
+              Image(systemName: "swift").foregroundStyle(Color.blue).symbolEffect(.pulse)
+              Button("\(concreteTopic.id)") { selectedConcreteTopic = concreteTopic }
+            }
           }
         }
       }
