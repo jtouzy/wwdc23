@@ -22,6 +22,7 @@ struct ContentView: View {
 }
 
 enum Topic: String, CaseIterable, Identifiable {
+  case containerRelativeFrame
   case scrollTransition
   case scrollViewPosition
   
@@ -32,6 +33,8 @@ extension Topic {
   @ViewBuilder
   func buildTopicView() -> some View {
     switch self {
+    case .containerRelativeFrame:
+      ContainerRelativeFrame()
     case .scrollTransition:
       ScrollTransition()
     case .scrollViewPosition:
