@@ -22,6 +22,7 @@ struct ContentView: View {
 }
 
 enum Topic: String, CaseIterable, Identifiable {
+  case scrollTransition
   case scrollViewPosition
   
   var id: Self.RawValue { rawValue }
@@ -31,6 +32,8 @@ extension Topic {
   @ViewBuilder
   func buildTopicView() -> some View {
     switch self {
+    case .scrollTransition:
+      ScrollTransition()
     case .scrollViewPosition:
       ScrollViewPosition()
     }

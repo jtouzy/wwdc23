@@ -8,12 +8,10 @@ struct ScrollViewPosition: View {
     VStack {
       headerView()
       ScrollView {
-        VStack {
-          ForEach(data) { item in
-            Text(item.id.description)
-              .padding()
-              .frame(maxWidth: .infinity)
-          }
+        ForEach(data) { item in
+          Text(item.id.description)
+            .padding()
+            .frame(maxWidth: .infinity)
         }
         // 1: You define the scroll target to inspect
         .scrollTargetLayout()

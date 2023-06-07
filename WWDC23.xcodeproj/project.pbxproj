@@ -12,6 +12,7 @@
 		F833C1EA2A2F6A0400B338F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F833C1E92A2F6A0400B338F0 /* Assets.xcassets */; };
 		F8E1B1272A306F1200DD788F /* ScrollViewPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1262A306F1200DD788F /* ScrollViewPosition.swift */; };
 		F8E1B12A2A30CF3000DD788F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1292A30CF3000DD788F /* Models.swift */; };
+		F8E1B12C2A30D6D100DD788F /* ScrollTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B12B2A30D6D100DD788F /* ScrollTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F833C1EB2A2F6A0400B338F0 /* WWDC23.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WWDC23.entitlements; sourceTree = "<group>"; };
 		F8E1B1262A306F1200DD788F /* ScrollViewPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPosition.swift; sourceTree = "<group>"; };
 		F8E1B1292A30CF3000DD788F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F8E1B12B2A30D6D100DD788F /* ScrollTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		F8E1B1252A306EDA00DD788F /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F8E1B12B2A30D6D100DD788F /* ScrollTransition.swift */,
 				F8E1B1262A306F1200DD788F /* ScrollViewPosition.swift */,
 			);
 			path = SwiftUI;
@@ -151,6 +154,7 @@
 			files = (
 				F833C1E82A2F6A0200B338F0 /* ContentView.swift in Sources */,
 				F8E1B1272A306F1200DD788F /* ScrollViewPosition.swift in Sources */,
+				F8E1B12C2A30D6D100DD788F /* ScrollTransition.swift in Sources */,
 				F833C1E62A2F6A0200B338F0 /* WWDC23App.swift in Sources */,
 				F8E1B12A2A30CF3000DD788F /* Models.swift in Sources */,
 			);
