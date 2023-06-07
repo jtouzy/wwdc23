@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SafeAreaPadding: View {
+struct ContentMargins: View {
   @State var data = FakeItem.build(50)
   
   var body: some View {
@@ -17,11 +17,10 @@ struct SafeAreaPadding: View {
       ScrollView(axis) {
         scrollViewContent(for: axis)
       }
-      // 1: The safe area padding will add extra padding depending on the axis you give.
+      // 1: The content margins will add extra margin depending on the axis you give.
       // This extra padding can be seen on before the first and after last element, in those examples.
-      // Before this, we needed to add extra padding on the ScrollView content to get this behavior.
-      // The scroll indicator will be affected by this padding. See contentMargins to avoid this.
-      .safeAreaPadding(paddingAxis, 16.0)
+      // With this you can adjust scroll content separatly from scroll indicators.
+      .contentMargins(paddingAxis, 16.0, for: .scrollContent)
     }
     .containerRelativeFrame(.vertical, count: 2, span: 1, spacing: 16.0)
   }

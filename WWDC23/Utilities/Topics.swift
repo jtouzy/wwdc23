@@ -27,6 +27,7 @@ extension Topic where Self: RawRepresentable, RawValue == String {
 // Topic: SwiftUI
 enum SwiftUITopic: String, Topic, CaseIterable {
   case containerRelativeFrame
+  case contentMargins
   case inspector
   case safeAreaPadding
   case scrollTransition
@@ -38,6 +39,8 @@ extension SwiftUITopic {
     switch self {
     case .containerRelativeFrame:
       ContainerRelativeFrame()
+    case .contentMargins:
+      ContentMargins()
     case .inspector:
       Inspector()
     case .safeAreaPadding:
