@@ -3,12 +3,15 @@ import SwiftUI
 // List of all topic sections
 enum TopicSection: String, CaseIterable, Identifiable {
   case swiftUIModifiers = "SwiftUI modifiers"
+  case swiftUIViews = "SwiftUI views"
   
   var id: Self.RawValue { rawValue }
   var topics: [ConcreteTopic] {
     switch self {
     case .swiftUIModifiers:
-      SwiftUITopic.allCases.concrete()
+      SwiftUIModifiersTopic.allCases.concrete()
+    case .swiftUIViews:
+      SwiftUIViewsTopic.allCases.concrete()
     }
   }
 }
@@ -24,8 +27,8 @@ extension Topic where Self: RawRepresentable, RawValue == String {
   var id: RawValue { rawValue }
 }
 
-// Topic: SwiftUI
-enum SwiftUITopic: String, Topic, CaseIterable {
+// Topic: SwiftUI Modifiers
+enum SwiftUIModifiersTopic: String, Topic, CaseIterable {
   case containerRelativeFrame
   case contentMargins
   case inspector
@@ -33,7 +36,7 @@ enum SwiftUITopic: String, Topic, CaseIterable {
   case scrollTransition
   case scrollViewPosition
 }
-extension SwiftUITopic {
+extension SwiftUIModifiersTopic {
   @ViewBuilder
   func buildTopicView() -> some View {
     switch self {
@@ -49,6 +52,20 @@ extension SwiftUITopic {
       ScrollTransition()
     case .scrollViewPosition:
       ScrollViewPosition()
+    }
+  }
+}
+
+// Topic: SwiftUI Views
+enum SwiftUIViewsTopic: String, Topic, CaseIterable {
+  case contentUnavailableView = "ContentUnavailableView"
+}
+extension SwiftUIViewsTopic {
+  @ViewBuilder
+  func buildTopicView() -> some View {
+    switch self {
+    case .contentUnavailableView:
+      ContentUnavailableViewDemo()
     }
   }
 }

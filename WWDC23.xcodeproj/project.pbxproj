@@ -18,6 +18,7 @@
 		F8E1B1322A30FBD400DD788F /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1312A30FBD400DD788F /* Inspector.swift */; };
 		F8E1B1342A31219900DD788F /* SafeAreaPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1332A31219900DD788F /* SafeAreaPadding.swift */; };
 		F8E1B1362A31251800DD788F /* ContentMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1352A31251800DD788F /* ContentMargins.swift */; };
+		F8E1B1392A31BA4B00DD788F /* ContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E1B1382A31BA4B00DD788F /* ContentUnavailableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F8E1B1312A30FBD400DD788F /* Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
 		F8E1B1332A31219900DD788F /* SafeAreaPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaPadding.swift; sourceTree = "<group>"; };
 		F8E1B1352A31251800DD788F /* ContentMargins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMargins.swift; sourceTree = "<group>"; };
+		F8E1B1382A31BA4B00DD788F /* ContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				F833C1E52A2F6A0200B338F0 /* WWDC23App.swift */,
 				F833C1E92A2F6A0400B338F0 /* Assets.xcassets */,
 				F8E1B1252A306EDA00DD788F /* SwiftUIModifiers */,
+				F8E1B1372A31BA3600DD788F /* SwiftUIViews */,
 				F8E1B1282A30CF2000DD788F /* Utilities */,
 			);
 			path = WWDC23;
@@ -96,6 +99,14 @@
 				F8E1B1292A30CF3000DD788F /* ViewModels.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F8E1B1372A31BA3600DD788F /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8E1B1382A31BA4B00DD788F /* ContentUnavailableView.swift */,
+			);
+			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				F8E1B1342A31219900DD788F /* SafeAreaPadding.swift in Sources */,
 				F8E1B1302A30E6B100DD788F /* Topics.swift in Sources */,
 				F8E1B1322A30FBD400DD788F /* Inspector.swift in Sources */,
+				F8E1B1392A31BA4B00DD788F /* ContentUnavailableView.swift in Sources */,
 				F8E1B1362A31251800DD788F /* ContentMargins.swift in Sources */,
 				F833C1E82A2F6A0200B338F0 /* ContentView.swift in Sources */,
 				F8E1B12E2A30D90E00DD788F /* ContainerRelativeFrame.swift in Sources */,
